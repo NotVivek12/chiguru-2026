@@ -168,8 +168,9 @@ em {
   overflow: hidden;
   padding: 130px 20px 120px;
   background:
-    linear-gradient(180deg, rgb(53 184 240 / 45%) 0%, rgb(255 210 63 / 0%) 55%, rgb(255 107 26 / 40%) 100%),
-    url('/assets/8a67b.png') center 38% / cover;
+    linear-gradient(180deg, rgb(53 184 240 / 45%) 0%, rgb(255 210 63 / 0%) 55%, rgb(255 107 26 / 40%) 100%);
+  background-position: center 38%;
+  background-size: cover;
   border-bottom: 4px solid var(--ink);
 }
 .hero-inner {

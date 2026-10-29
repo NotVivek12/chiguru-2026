@@ -9,6 +9,8 @@ type OverlayType = "poster" | "brochure" | null
 const MAPS =
   "https://maps.app.goo.gl/xRoKbFhGqvAQW8T99"
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>
 }
@@ -52,7 +54,7 @@ function Header({ page, setPage }: {
         onClick={() => go("home")}
         aria-label="Chiguru home"
       >
-        <img src="/assets/701c9.svg" alt="Chiguru 2026" />
+        <img src={assetUrl("assets/701c9.svg")} alt="Chiguru 2026" />
       </button>
       <button
         className="menu-button"
@@ -93,12 +95,17 @@ function Hero({
   setOverlay: (o: OverlayType) => void
 }) {
   return (
-    <section className="hero">
-      <img className="stk stk-dancer" src="/assets/st-dancer.png" alt="" />
-      <img className="stk stk-band" src="/assets/st-band.png" alt="" />
-      <img className="stk stk-drummer" src="/assets/st-drummer.png" alt="" />
-      <img className="stk stk-singer" src="/assets/st-singer.png" alt="" />
-      <img className="stk stk-guitar" src="/assets/st-guitar.png" alt="" />
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgb(53 184 240 / 45%) 0%, rgb(255 210 63 / 0%) 55%, rgb(255 107 26 / 40%) 100%), url('${assetUrl("assets/8a67b.png")}')`,
+      }}
+    >
+      <img className="stk stk-dancer" src={assetUrl("assets/st-dancer.png")} alt="" />
+      <img className="stk stk-band" src={assetUrl("assets/st-band.png")} alt="" />
+      <img className="stk stk-drummer" src={assetUrl("assets/st-drummer.png")} alt="" />
+      <img className="stk stk-singer" src={assetUrl("assets/st-singer.png")} alt="" />
+      <img className="stk stk-guitar" src={assetUrl("assets/st-guitar.png")} alt="" />
 
       <div className="hero-inner">
         <p className="presents">Cambridge Institute of Technology presents</p>
@@ -232,7 +239,10 @@ function HomePage({
         </h2>
         <div className="deets-grid">
           <button className="poster-tile" onClick={() => setOverlay("poster")}>
-            <img src="/assets/chiguru-poster.png" alt="Chiguru 2026 poster" />
+            <img
+              src={assetUrl("assets/chiguru-poster.png")}
+              alt="Chiguru 2026 poster"
+            />
             <span className="sticker-tag">Poster ↗</span>
           </button>
           <button className="zine-tile" onClick={() => setOverlay("brochure")}>
@@ -294,7 +304,7 @@ function HomePage({
               here
             </span>
           </div>
-          <img className="stk stk-tabla" src="/assets/st-tabla.png" alt="" />
+          <img className="stk stk-tabla" src={assetUrl("assets/st-tabla.png")} alt="" />
         </div>
       </section>
     </main>
@@ -314,7 +324,7 @@ function EventsPage() {
           Events<i>.</i>
         </h1>
         <p>Hover a name to see who to call. Tap on your phone.</p>
-        <img className="stk stk-dancer2" src="/assets/st-dancer.png" alt="" />
+        <img className="stk stk-dancer2" src={assetUrl("assets/st-dancer.png")} alt="" />
       </section>
 
       <div className="chips">
@@ -425,7 +435,10 @@ function GalleryRow({
               } as CSSProperties
             }
           >
-            <img src={`/gallery/${galleryPhotos[p]}`} alt="Chiguru last year" />
+            <img
+              src={assetUrl(`gallery/${galleryPhotos[p]}`)}
+              alt="Chiguru last year"
+            />
           </figure>
         ))}
       </div>
@@ -477,7 +490,7 @@ function ContactPage() {
           Say hi<i>.</i>
         </h1>
         <p>Doubts about events, registration or the venue? Hit us up.</p>
-        <img className="stk stk-guitar2" src="/assets/st-guitar.png" alt="" />
+        <img className="stk stk-guitar2" src={assetUrl("assets/st-guitar.png")} alt="" />
       </section>
 
       <section className="contact-cards">
@@ -552,7 +565,7 @@ function ContactPage() {
               here
             </span>
           </div>
-          <img className="stk stk-tabla" src="/assets/st-tabla.png" alt="" />
+          <img className="stk stk-tabla" src={assetUrl("assets/st-tabla.png")} alt="" />
         </div>
       </section>
     </main>
@@ -608,10 +621,13 @@ function Overlay({ type, close }: {
       </button>
       {type === "poster" && (
         <div className="poster-modal">
-          <img src="/assets/chiguru-poster.png" alt="Chiguru 2026 poster" />
+          <img
+            src={assetUrl("assets/chiguru-poster.png")}
+            alt="Chiguru 2026 poster"
+          />
           <a
             className="btn btn-yellow"
-            href="/assets/chiguru-poster.png"
+            href={assetUrl("assets/chiguru-poster.png")}
             download
           >
             Download poster ↓
@@ -622,7 +638,7 @@ function Overlay({ type, close }: {
         <div className="zine-modal">
           <div className="zine-cover">
             <small>Cambridge Institute of Technology</small>
-            <img src="/assets/701c9.svg" alt="Chiguru 2026" />
+            <img src={assetUrl("assets/701c9.svg")} alt="Chiguru 2026" />
             <strong>The brochure</strong>
           </div>
           <div className="zine-body">
