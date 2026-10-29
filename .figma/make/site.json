@@ -1,0 +1,10 @@
+{
+  "description": "Explore Chiguru college fest events, view event details and registration links, find the venue, and access the fest poster, brochure, and contact information.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

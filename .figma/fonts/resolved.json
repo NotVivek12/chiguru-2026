@@ -1,0 +1,60 @@
+{
+  "resolved": [
+    {
+      "family": "Montserrat",
+      "style": "Bold",
+      "font_style": "normal",
+      "font_weight": 700,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/Montserrat_wght__2"
+      }
+    },
+    {
+      "family": "Montserrat",
+      "style": "Regular",
+      "font_style": "normal",
+      "font_weight": 400,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/Montserrat_wght__2"
+      }
+    },
+    {
+      "family": "Montserrat",
+      "style": "SemiBold",
+      "font_style": "normal",
+      "font_weight": 600,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/Montserrat_wght__2"
+      }
+    },
+    {
+      "family": "Open Sans",
+      "style": "Bold",
+      "font_style": "normal",
+      "font_weight": 700,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/OpenSans_wdth_wght__2"
+      }
+    }
+  ],
+  "blocked": [
+    {
+      "family": "Thick Thinks",
+      "style": "Regular",
+      "reason": "not_found"
+    },
+    {
+      "family": "Telma Variable",
+      "style": "Light",
+      "reason": "not_found"
+    }
+  ]
+}
