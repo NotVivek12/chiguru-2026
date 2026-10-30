@@ -856,12 +856,54 @@ footer { overflow: hidden; padding: 50px 5vw 30px; background: var(--yellow); bo
 
 @media (max-width: 640px) {
   .logo-pill { height: 52px; }
-  .hero { min-height: 880px; align-items: start; padding-top: 120px; }
-  .hero h1 { font-size: 30vw; }
-  .stk-dancer { bottom: -20px; height: 300px; }
-  .stk-band { right: -4vw; bottom: 120px; width: 62vw; }
+  .hero {
+    min-height: max(760px, 100svh);
+    align-items: start;
+    padding: 116px 16px 180px;
+  }
+  .hero-inner {
+    width: min(100%, 520px);
+  }
+  .presents {
+    width: min(100%, 320px);
+    margin-bottom: 16px;
+    padding-inline: 12px;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(68px, 25vw, 112px);
+  }
+  .hero-sub {
+    gap: 12px;
+    margin: 22px 0 28px;
+  }
+  .hero-sub > span {
+    width: min(100%, 320px);
+    padding: 10px 14px;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .hero-actions {
+    position: relative;
+    z-index: 7;
+    width: 100%;
+    gap: 12px;
+  }
+  .hero-actions .btn {
+    width: min(100%, 280px);
+    padding: 14px 18px;
+  }
+  .stk-dancer { bottom: -20px; left: -8vw; height: 280px; }
+  .stk-band { right: -12vw; bottom: 72px; width: 58vw; }
   .stk-drummer { display: none; }
-  .date-badge { bottom: 14px; right: auto; left: 50%; margin-left: -20px; width: 130px; }
+  .date-badge {
+    right: 16px;
+    bottom: 16px;
+    left: auto;
+    width: 112px;
+  }
   .ev-row { grid-template-columns: 1fr auto; gap: 10px 12px; padding: 18px 20px; }
   .ev-n { display: none; }
   .ev-name { grid-column: 1 / -1; }
@@ -874,6 +916,25 @@ footer { overflow: hidden; padding: 50px 5vw 30px; background: var(--yellow); bo
   .crew-grid { grid-template-columns: 1fr; }
   .map { min-height: 340px; }
   .foot-big { font-size: 20vw; }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-top: 108px;
+  }
+  .hero h1 {
+    font-size: 18vw;
+  }
+  .hero-sub {
+    flex-direction: column;
+    margin-top: 18px;
+  }
+  .hero-sub > span {
+    width: 100%;
+  }
+  .date-badge {
+    width: 100px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
