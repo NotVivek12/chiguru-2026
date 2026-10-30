@@ -873,7 +873,7 @@ footer { overflow: hidden; padding: 50px 5vw 30px; background: var(--yellow); bo
   }
   .hero h1 {
     max-width: 100%;
-    font-size: clamp(68px, 25vw, 112px);
+    font-size: clamp(60px, 18vw, 100px);
   }
   .hero-sub {
     gap: 12px;
