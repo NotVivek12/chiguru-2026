@@ -1,5 +1,6 @@
 export type EventItem = {
   name: string
+  day: "Day 1" | "Day 2"
   category: string
   color: string
   coordinators: [string, string][]
@@ -10,6 +11,7 @@ export const REGISTER_URL = "https://forms.gle/VbdLJxGQ3sh2S6S98"
 export const events: EventItem[] = [
   {
     name: "Indian Group Dance",
+    day: "Day 1",
     category: "Dance",
     coordinators: [
       ["Rahul.K", "8296774100"],
@@ -21,6 +23,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Western Group Dance",
+    day: "Day 2",
     category: "Dance",
     coordinators: [
       ["Mohith", "9380544601"],
@@ -32,6 +35,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Dance face off (Solo)",
+    day: "Day 1",
     category: "Dance",
     coordinators: [
       ["Rakshith Gowda", "6363069901"],
@@ -42,6 +46,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Solo Dance Classical",
+    day: "Day 2",
     category: "Dance",
     coordinators: [
       ["A Harshitha", "9606208081"],
@@ -51,6 +56,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Solo Dance Western",
+    day: "Day 1",
     category: "Dance",
     coordinators: [
       ["Suresh S H", "8197027296"],
@@ -60,6 +66,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Duet",
+    day: "Day 1",
     category: "Dance",
     coordinators: [
       ["Jisha", "9493742001"],
@@ -70,6 +77,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Group Singing",
+    day: "Day 1",
     category: "Music",
     coordinators: [
       ["Varshitha", "6366630345"],
@@ -81,6 +89,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Solo Singing - Western",
+    day: "Day 2",
     category: "Music",
     coordinators: [
       ["Divya PM", "9606438118"],
@@ -91,6 +100,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Solo Singing - Indian",
+    day: "Day 2",
     category: "Music",
     coordinators: [
       ["Kumar K N", "8088554178"],
@@ -101,6 +111,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Battle of Bands",
+    day: "Day 2",
     category: "Music",
     coordinators: [
       ["Tejas R Mutalik", "6366043126"],
@@ -112,6 +123,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Instrumental",
+    day: "Day 2",
     category: "Music",
     coordinators: [
       ["Susant Dhakal", "9901454840"],
@@ -121,6 +133,7 @@ export const events: EventItem[] = [
   },
   {
     name: "DJ War",
+    day: "Day 1",
     category: "Music",
     coordinators: [
       ["Sindhu", "8147931927"],
@@ -130,6 +143,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Beat Boxing",
+    day: "Day 1",
     category: "Music",
     coordinators: [
       ["Mahesha", "8073592779"],
@@ -139,6 +153,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Rap Battle",
+    day: "Day 1",
     category: "Music",
     coordinators: [
       ["Abhishek B V", "9980448417"],
@@ -148,6 +163,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Short Film",
+    day: "Day 1",
     category: "Theatre & Performance",
     coordinators: [
       ["Sahana", "9686863851"],
@@ -158,6 +174,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Mono Acting",
+    day: "Day 2",
     category: "Theatre & Performance",
     coordinators: [
       ["Likisha", "9481826158"],
@@ -167,6 +184,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Stand-up-Comedy",
+    day: "Day 1",
     category: "Theatre & Performance",
     coordinators: [
       ["Soujanya", "9148552213"],
@@ -176,6 +194,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Mime",
+    day: "Day 1",
     category: "Theatre & Performance",
     coordinators: [
       ["Bharghav", "9611928719"],
@@ -187,6 +206,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Mimicry",
+    day: "Day 1",
     category: "Theatre & Performance",
     coordinators: [
       ["Shreshta", "7204620683"],
@@ -196,6 +216,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Mad Ads",
+    day: "Day 2",
     category: "Theatre & Performance",
     coordinators: [
       ["Shashidhar", "9686229807"],
@@ -206,6 +227,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Nukkad Natak/Street play/Skit",
+    day: "Day 2",
     category: "Theatre & Performance",
     coordinators: [
       ["Nikhil S", "8792128125"],
@@ -217,6 +239,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Fashion Show",
+    day: "Day 2",
     category: "Fashion",
     coordinators: [
       ["Rahul R", "8431290212"],
@@ -229,6 +252,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Photography",
+    day: "Day 1",
     category: "Visual Arts",
     coordinators: [
       ["Likitha Gopal", "7411311089"],
@@ -238,6 +262,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Pencil Sketch",
+    day: "Day 1",
     category: "Visual Arts",
     coordinators: [
       ["Aishwarya", "7795336183"],
@@ -247,6 +272,7 @@ export const events: EventItem[] = [
   },
   {
     name: "On Spot Painting",
+    day: "Day 1",
     category: "Visual Arts",
     coordinators: [
       ["Himashree", "7975258033"],
@@ -256,6 +282,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Meme Making",
+    day: "Day 2",
     category: "Visual Arts",
     coordinators: [
       ["Dhanush", "9740262892"],
@@ -265,6 +292,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Man VS Food",
+    day: "Day 2",
     category: "Food",
     coordinators: [
       ["Varsha", "9535941014"],
@@ -274,6 +302,7 @@ export const events: EventItem[] = [
   },
   {
     name: "BGMI",
+    day: "Day 1",
     category: "Gaming",
     coordinators: [
       ["Adnaan", "9964920065"],
@@ -283,6 +312,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Free Fire",
+    day: "Day 2",
     category: "Gaming",
     coordinators: [
       ["Dheeraj", "9448673531"],
@@ -292,6 +322,7 @@ export const events: EventItem[] = [
   },
   {
     name: "Valorant",
+    day: "Day 2",
     category: "Gaming",
     coordinators: [
       ["Indraneel", "8660948776"],

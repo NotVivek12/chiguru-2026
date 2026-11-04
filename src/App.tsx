@@ -362,6 +362,7 @@ function EventsPage() {
                   {e.name}
                 </button>
                 <span className="ev-cat">{e.category}</span>
+                <span className="ev-day">{e.day}</span>
                 <a
                   className="ev-reg"
                   href={REGISTER_URL}

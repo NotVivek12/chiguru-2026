@@ -593,7 +593,7 @@ h2 em { color: var(--orange); }
 .ev.on { background: var(--c); }
 .ev-row {
   display: grid;
-  grid-template-columns: 60px 1fr auto auto;
+  grid-template-columns: 60px 1fr auto auto auto;
   gap: 24px;
   align-items: center;
   padding: 18px 5vw;
@@ -622,6 +622,16 @@ h2 em { color: var(--orange); }
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
+}
+.ev-day {
+  padding: 7px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .ev-reg {
   display: flex;
@@ -904,10 +914,11 @@ footer { overflow: hidden; padding: 50px 5vw 30px; background: var(--yellow); bo
     left: auto;
     width: 112px;
   }
-  .ev-row { grid-template-columns: 1fr auto; gap: 10px 12px; padding: 18px 20px; }
+  .ev-row { grid-template-columns: 1fr auto auto; gap: 10px 12px; padding: 18px 20px; }
   .ev-n { display: none; }
   .ev-name { grid-column: 1 / -1; }
   .ev-cat { justify-self: start; }
+  .ev-day { justify-self: start; }
   .ev-reg { justify-self: end; }
   .ev-card { position: static; width: auto; margin: 0 20px 22px; translate: none; rotate: -1deg; }
   .ev.on .ev-name { transform: none; }
