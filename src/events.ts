@@ -9,6 +9,7 @@ export type EventItem = {
 }
 
 export const REGISTER_URL = "https://forms.gle/VbdLJxGQ3sh2S6S98"
+export const SPORTS_REGISTER_URL = "https://forms.gle/2nAq6VozJo95NuMm9"
 
 export const events: EventItem[] = [
   {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties } from "react"
-import { events, REGISTER_URL } from "./events"
+import { events, REGISTER_URL, SPORTS_REGISTER_URL } from "./events"
 import { galleryPhotos } from "./gallery"
 
 type Page = "home" | "events" | "contact" | "gallery"
@@ -375,7 +375,7 @@ function EventsPage() {
                 <span className="ev-day">{e.day}</span>
                 <a
                   className="ev-reg"
-                  href={REGISTER_URL}
+                  href={e.category === "Sports" ? SPORTS_REGISTER_URL : REGISTER_URL}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -407,7 +407,7 @@ function EventsPage() {
                   )}
                   <a
                     className="btn btn-black"
-                    href={REGISTER_URL}
+                    href={e.category === "Sports" ? SPORTS_REGISTER_URL : REGISTER_URL}
                     target="_blank"
                     rel="noreferrer"
                   >
