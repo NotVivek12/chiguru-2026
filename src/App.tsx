@@ -9,6 +9,16 @@ type OverlayType = "poster" | "brochure" | null
 const MAPS =
   "https://maps.app.goo.gl/xRoKbFhGqvAQW8T99"
 
+const BROCHURE_URL =
+  "https://drive.google.com/file/d/1zjHuculvCzTFPHf0YGBiH6WCfpnkAGpJ/view?usp=sharing"
+const RULES_URL =
+  "https://drive.google.com/file/d/1gK_uqwnZA8F8Eba6997GfH-OiA_RVyWE/view?usp=sharing"
+const EVENT_LIST_RULES_URL =
+  "https://drive.google.com/file/d/1DZY9VzuwrNlIkWfNPn6C-uRLkm2kGbhS/view?usp=sharing"
+
+const drivePreviewUrl = (url: string) =>
+  url.replace("/view?usp=sharing", "/preview")
+
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 function Arrow() {
@@ -179,7 +189,7 @@ function HomePage({
       <section className="vibe">
         <h2>
           <span className="hl hl-orange">2 days.</span>{" "}
-          <span className="hl hl-blue">30 events.</span> One campus that{" "}
+          <span className="hl hl-blue">{events.length} events.</span> One campus that{" "}
           <span className="hl hl-pink">does not sleep.</span>
         </h2>
         <p>
@@ -389,6 +399,12 @@ function EventsPage() {
                       </div>
                     ))}
                   </dl>
+                  {(e.registrationFee || e.prizes) && (
+                    <div className="ev-meta">
+                      {e.registrationFee && <span>Fee: {e.registrationFee}</span>}
+                      {e.prizes && <span>{e.prizes}</span>}
+                    </div>
+                  )}
                   <a
                     className="btn btn-black"
                     href={REGISTER_URL}
@@ -406,7 +422,7 @@ function EventsPage() {
 
       <Tape
         className="tape-black"
-        items={["30 events", "Pick your stage", "Chiguru 2026"]}
+        items={[`${events.length} events`, "Pick your stage", "Chiguru 2026"]}
       />
     </main>
   )
@@ -648,12 +664,48 @@ function Overlay({ type, close }: {
               <br />
               <em>cheat sheet.</em>
             </h2>
-            <p>The full PDF is landing soon. Here is what's inside.</p>
-            <ul>
-              <li>Event rules and rounds</li>
-              <li>Day-wise schedule</li>
-              <li>Venue map and how to reach</li>
-            </ul>
+            <p>Everything you need before you show up.</p>
+            <div className="document-grid">
+              <article className="document-card">
+                <div className="document-card-heading">
+                  <strong>Brochure</strong>
+                  <a href={BROCHURE_URL} target="_blank" rel="noreferrer">
+                    Open PDF <Arrow />
+                  </a>
+                </div>
+                <iframe
+                  title="Chiguru 2026 brochure"
+                  src={drivePreviewUrl(BROCHURE_URL)}
+                  loading="lazy"
+                />
+              </article>
+              <article className="document-card">
+                <div className="document-card-heading">
+                  <strong>Sports Event list &amp; rules</strong>
+                  <a href={EVENT_LIST_RULES_URL} target="_blank" rel="noreferrer">
+                    Open PDF <Arrow />
+                  </a>
+                </div>
+                <iframe
+                  title="Chiguru 2026 event list and rules"
+                  src={drivePreviewUrl(EVENT_LIST_RULES_URL)}
+                  loading="lazy"
+                />
+              </article>
+              <article className="document-card">
+                <div className="document-card-heading">
+                  <strong>Rules &amp; regulations</strong>
+                  <a href={RULES_URL} target="_blank" rel="noreferrer">
+                    Open PDF <Arrow />
+                  </a>
+                </div>
+                <iframe
+                  title="Chiguru 2026 rules and regulations"
+                  src={drivePreviewUrl(RULES_URL)}
+                  loading="lazy"
+                />
+              </article>
+            </div>
             <button className="btn btn-black" onClick={close}>
               Cool, got it
             </button>

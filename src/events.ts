@@ -1,9 +1,11 @@
 export type EventItem = {
   name: string
-  day: "Day 1" | "Day 2"
+  day: string
   category: string
   color: string
   coordinators: [string, string][]
+  registrationFee?: string
+  prizes?: string
 }
 
 export const REGISTER_URL = "https://forms.gle/VbdLJxGQ3sh2S6S98"
@@ -329,5 +331,77 @@ export const events: EventItem[] = [
       ["Saathvik", "9019210644"],
     ],
     color: "#35b8f0",
+  },
+  {
+    name: "Cricket (Men)",
+    day: "Nov 16",
+    category: "Sports",
+    coordinators: [
+      ["Prashanth", "9901212085"],
+      ["Pratham", "9814827557"],
+    ],
+    registrationFee: "₹2,000",
+    prizes: "Winner ₹10,000 · Runner-up ₹6,000",
+    color: "#1fa35c",
+  },
+  {
+    name: "Football (Men)",
+    day: "Nov 16",
+    category: "Sports",
+    coordinators: [
+      ["Mohie", "9880721111"],
+      ["Sugara", "9869601219"],
+    ],
+    registrationFee: "₹1,500",
+    prizes: "Winner ₹6,000 · Runner-up ₹4,000",
+    color: "#1fa35c",
+  },
+  {
+    name: "Volleyball (Men)",
+    day: "Nov 16",
+    category: "Sports",
+    coordinators: [
+      ["Guru Bhagath", "6363590194"],
+      ["Vinay", "7259626435"],
+    ],
+    registrationFee: "₹1,500",
+    prizes: "Winner ₹6,000 · Runner-up ₹4,000",
+    color: "#1fa35c",
+  },
+  {
+    name: "Badminton (Men & Women)",
+    day: "Nov 18",
+    category: "Sports",
+    coordinators: [
+      ["Santhosh", "7989191979"],
+      ["Ritesh", "8971637310"],
+    ],
+    registrationFee: "₹1,500",
+    prizes: "Winner ₹5,000 · Runner-up ₹3,000",
+    color: "#1fa35c",
+  },
+  {
+    name: "Throw Ball (Women)",
+    day: "Nov 19",
+    category: "Sports",
+    coordinators: [
+      ["Disha", "9741409518"],
+      ["Chandu", "9538325146"],
+    ],
+    registrationFee: "₹1,500",
+    prizes: "Winner ₹6,000 · Runner-up ₹4,000",
+    color: "#1fa35c",
+  },
+  {
+    name: "Basketball (Men)",
+    day: "Nov 19",
+    category: "Sports",
+    coordinators: [
+      ["Jashwanth", "8105184340"],
+      ["Nishanth", "9080911663"],
+    ],
+    registrationFee: "₹1,500",
+    prizes: "Winner ₹6,000 · Runner-up ₹4,000",
+    color: "#1fa35c",
   },
 ]

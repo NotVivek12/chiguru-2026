@@ -1,7 +1,11 @@
 {
-  "description": "Explore Chiguru college fest events, view event details and registration links, find the venue, and access the fest poster, brochure, and contact information.",
+  "title": "Chiguru 2026 | Inter-collegiate Cultural Fest",
+  "description": "Chiguru 2026 is Cambridge Institute of Technology's inter-collegiate cultural fest in Bengaluru. Explore events, register, view the brochure and read the rules and regulations.",
   "robots": {
-    "index": false
+    "index": true
+  },
+  "icons": {
+    "icon": "/assets/701c9.svg"
   },
   "accessibility": {
     "addBypassLinks": false,
