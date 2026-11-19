@@ -12,7 +12,7 @@ const MAPS =
 const BROCHURE_URL =
   "https://drive.google.com/file/d/1zjHuculvCzTFPHf0YGBiH6WCfpnkAGpJ/view?usp=sharing"
 const RULES_URL =
-  "https://drive.google.com/file/d/1gK_uqwnZA8F8Eba6997GfH-OiA_RVyWE/view?usp=sharing"
+  "https://drive.google.com/file/d/18bPBM2BqCOZo8_rCDbMaeoXbdkKEhcl-/view?usp=sharing"
 const EVENT_LIST_RULES_URL =
   "https://drive.google.com/file/d/1DZY9VzuwrNlIkWfNPn6C-uRLkm2kGbhS/view?usp=sharing"
 
