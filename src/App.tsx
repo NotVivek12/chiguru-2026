@@ -10,7 +10,7 @@ const MAPS =
   "https://maps.app.goo.gl/xRoKbFhGqvAQW8T99"
 
 const BROCHURE_URL =
-  "https://drive.google.com/file/d/1zjHuculvCzTFPHf0YGBiH6WCfpnkAGpJ/view?usp=sharing"
+  "https://drive.google.com/file/d/1VTJJaMQXleg8Le-ajgrtp_rXsUr3j-Wp/view?usp=sharing"
 const RULES_URL =
   "https://drive.google.com/file/d/18bPBM2BqCOZo8_rCDbMaeoXbdkKEhcl-/view?usp=sharing"
 const EVENT_LIST_RULES_URL =
